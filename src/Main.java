@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -15,6 +17,34 @@ public class Main {
                 switch (opMenu){
                     case 1:{
                         System.out.println(AZUL + "\n\t1. Videojuegos"+ RESET);
+                        String nombreVideojuego, categoria, pais, nombreAutorv;
+                        int anio, edad;
+                        List listaVideojuegos = new ArrayList();
+                        //for(int i = 0;i < 4; i++) {
+                            System.out.print("Ingrese el nombre del videojuego: ");
+                            sc.nextLine();
+                            nombreVideojuego = sc.nextLine();
+                            System.out.print("Ingrese el anio de publicacion: ");
+                            anio = sc.nextInt();
+                            System.out.print("Ingrese la categoria: ");
+                            sc.nextLine();
+                            categoria = sc.nextLine();
+                            System.out.print("Ingrese el pais de origen del videojuego: ");
+                            pais = sc.nextLine();
+                            System.out.print("Ingrese el nombre del autor: ");
+                            nombreAutorv = sc.nextLine();
+                            System.out.print("Ingrese la edad del autor: ");
+                            edad = sc.nextInt();
+
+                            //List listaVideojuegos = new ArrayList();
+
+                            listaVideojuegos.add(new autorVideojuego(nombreVideojuego, anio, categoria, pais, nombreAutorv, edad));
+                        //}
+                        imprimirLista((ArrayList) listaVideojuegos);
+                        /*autorVideojuego miPVideojuego = new autorVideojuego(nombreVideojuego,anio,categoria,pais,nombreAutorv,edad);
+                        System.out.println(miPVideojuego.datosImportantes(nombreVideojuego,anio));
+                        System.out.println(miPVideojuego.datosMas(nombreVideojuego,anio,categoria,pais));
+                        System.out.println(miPVideojuego.miVideojuego(nombreVideojuego,anio,categoria,pais,nombreAutorv,edad));*/
                     }break;
                     case 2:{
                         System.out.println(AZUL + "\n\t2. Grupos Musicales o Artistas" + RESET);
@@ -47,6 +77,15 @@ public class Main {
             opPrincipal = sc.nextInt();
         }
         return opPrincipal;
+    }
+
+    public static void imprimirLista(ArrayList lista){
+        for (int i = 0; i < lista.size();i++){
+            autorVideojuego videojuego = (autorVideojuego)lista.get(i);
+            videojuego.imprimirVideojuego();
+
+            System.out.println("");
+        }
     }
 
 }

@@ -1,0 +1,2 @@
+public class nombreArtistas {
+}
