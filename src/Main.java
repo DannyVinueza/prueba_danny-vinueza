@@ -20,7 +20,7 @@ public class Main {
                         String nombreVideojuego, categoria, pais, nombreAutorv;
                         int anio, edad;
                         List listaVideojuegos = new ArrayList();
-                        //for(int i = 0;i < 4; i++) {
+                        //for(int i = 0;i < 4; i++) {//Si se quiere guardar mas de un dato del objeto
                             System.out.print("Ingrese el nombre del videojuego: ");
                             sc.nextLine();
                             nombreVideojuego = sc.nextLine();
@@ -36,10 +36,8 @@ public class Main {
                             System.out.print("Ingrese la edad del autor: ");
                             edad = sc.nextInt();
 
-                            //List listaVideojuegos = new ArrayList();
-
                             listaVideojuegos.add(new autorVideojuego(nombreVideojuego, anio, categoria, pais, nombreAutorv, edad));
-                        //}
+                        //}//Fin del for
                         imprimirLista((ArrayList) listaVideojuegos);
                         /*autorVideojuego miPVideojuego = new autorVideojuego(nombreVideojuego,anio,categoria,pais,nombreAutorv,edad);
                         System.out.println(miPVideojuego.datosImportantes(nombreVideojuego,anio));
