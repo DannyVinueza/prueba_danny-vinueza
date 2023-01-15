@@ -1,4 +1,4 @@
-					#	**CORRECION DEL EXAMEN DE LA ASIGNATURA "POO"**
+						**CORRECION DEL EXAMEN DE LA ASIGNATURA "POO"**
 ## AUTOR:
 #### - Danny Vinueza
 En el siguiente repositorio se encuentra un programa que utiliza el concepto de herencia en tres niveles con los temas: videojuegos, artistas, comida mundial.
