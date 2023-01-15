@@ -1,4 +1,4 @@
-public class categoriaVideojuego extends nombreVideojuego{
+public class categoriaVideojuego extends nombreVideojuego{//Clase Hija
     String tipoCategoria;
     String pais;
 

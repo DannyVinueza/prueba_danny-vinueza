@@ -1,4 +1,4 @@
-public class autorVideojuego extends categoriaVideojuego{
+public class autorVideojuego extends categoriaVideojuego{//Clase Nieta
     String nombreAutor;
     int edad;
 

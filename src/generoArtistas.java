@@ -1,4 +1,4 @@
-public class generoArtistas extends nombreArtistas{
+public class generoArtistas extends nombreArtistas{//Clase Hija
     String generoMusica;
     int nCanciones;
 

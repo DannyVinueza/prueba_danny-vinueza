@@ -1,4 +1,4 @@
-public class presentacionArtistas extends generoArtistas{
+public class presentacionArtistas extends generoArtistas{//Clase Nieta
     String paisPresentacion;
     String ciudadPresentacion;
 
