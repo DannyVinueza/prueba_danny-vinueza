@@ -3,7 +3,7 @@ public class autorVideojuego extends categoriaVideojuego{
     int edad;
 
     public autorVideojuego(String nombre, int anio, String tipoCategoria, String pais, String nombreAutor, int edad) {
-        super(nombre, anio, tipoCategoria, pais);
+        super(nombre, anio, tipoCategoria, pais);//Hereda de la clase categoriaVideojuego
         this.nombreAutor = nombreAutor;
         this.edad = edad;
     }

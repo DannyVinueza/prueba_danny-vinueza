@@ -1,4 +1,4 @@
-public class nombreVideojuego {
+public class nombreVideojuego {//Clase padre o superclase
     String nombre;
     int anio;
 

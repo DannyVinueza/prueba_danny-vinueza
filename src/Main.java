@@ -38,6 +38,7 @@ public class Main {
 
                             listaVideojuegos.add(new autorVideojuego(nombreVideojuego, anio, categoria, pais, nombreAutorv, edad));
                         //}//Fin del for
+                        System.out.println(AZUL + "\n\nImpresion de los datos ingresados....\n" + RESET);
                         imprimirLista((ArrayList) listaVideojuegos);
                         /*autorVideojuego miPVideojuego = new autorVideojuego(nombreVideojuego,anio,categoria,pais,nombreAutorv,edad);
                         System.out.println(miPVideojuego.datosImportantes(nombreVideojuego,anio));
@@ -46,9 +47,34 @@ public class Main {
                     }break;
                     case 2:{
                         System.out.println(AZUL + "\n\t2. Grupos Musicales o Artistas" + RESET);
+                        String nombreArtista, generoMusical, paisArt, ciudadArt;
+                        int anioArt, nCanciones;
+
+                        List listaArtistas = new ArrayList();
+                        System.out.print("Ingrese los nombres del Artista: ");
+                        sc.nextLine();
+                        nombreArtista = sc.nextLine();
+                        System.out.print("Ingrese el anio de nacimiento: ");
+                        anioArt = sc.nextInt();
+                        System.out.print("Ingrese el genero musical: ");
+                        sc.nextLine();
+                        generoMusical = sc.nextLine();
+                        System.out.print("Ingrese el pais de la ultima Presentacion: ");
+                        paisArt = sc.nextLine();
+                        System.out.print("Ingrese la ciudad de la presentacion: ");
+                        ciudadArt = sc.nextLine();
+                        System.out.print("Ingrese el numero de canciones del artista: ");
+                        nCanciones = sc.nextInt();
+                        presentacionArtistas miartista = new presentacionArtistas(nombreArtista,anioArt,generoMusical,nCanciones, paisArt, ciudadArt);
+                        listaArtistas.add(miartista);
+
+                        System.out.println(AZUL + "\n\nImpresion de los datos ingresados....\n" + RESET);
+                        imprimirListaArt((ArrayList) listaArtistas);
+                        //listaArtistas.add(new presentacionArtistas(nombreArtista,anioArt,generoMusical,nCanciones, paisArt, ciudadArt));
                     }break;
                     case 3:{
                         System.out.println(AZUL + "\n\t3. Comida a Nivel Mundial" + RESET);
+
                     }break;
                     case 4:{
                         System.out.printf(VERDE + "Saliendo......" + RESET);
@@ -77,7 +103,7 @@ public class Main {
         return opPrincipal;
     }
 
-    public static void imprimirLista(ArrayList lista){
+    public static void imprimirLista(ArrayList lista){//Imprime lo que tenga en las clases de los videojuegos
         for (int i = 0; i < lista.size();i++){
             autorVideojuego videojuego = (autorVideojuego)lista.get(i);
             videojuego.imprimirVideojuego();
@@ -86,4 +112,12 @@ public class Main {
         }
     }
 
+    public static void imprimirListaArt(ArrayList lista){//Imprime lo que tenga en las clases de los artistas
+        for (int i = 0; i < lista.size();i++){
+            presentacionArtistas artista = (presentacionArtistas) lista.get(i);
+            artista.imprimirListaArt();
+
+            System.out.println("");
+        }
+    }
 }
