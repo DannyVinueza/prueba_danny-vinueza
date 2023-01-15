@@ -74,7 +74,29 @@ public class Main {
                     }break;
                     case 3:{
                         System.out.println(AZUL + "\n\t3. Comida a Nivel Mundial" + RESET);
+                        String nombreComida, paisComida, categoriaComida, ingredientes;
+                        double precio;
 
+                        List listaComida = new ArrayList();
+
+                        System.out.print("Ingrese el nomnbre de la Comida: ");
+                        sc.nextLine();
+                        nombreComida = sc.nextLine();
+                        System.out.print("Ingrese el precio: ");
+                        precio = sc.nextDouble();
+                        System.out.print("Ingrese el pais de origen: ");
+                        sc.nextLine();
+                        paisComida = sc.nextLine();
+                        System.out.print("Ingrese la categoria: ");
+                        categoriaComida = sc.nextLine();
+                        System.out.print("Ingrese los ingredientes: ");
+                        ingredientes = sc.nextLine();
+
+                        ingredientesComida miComida = new ingredientesComida(nombreComida, precio,paisComida,categoriaComida,ingredientes);
+                        listaComida.add(miComida);
+
+                        System.out.println(AZUL + "\n\nImpresion de los datos ingresados....\n" + RESET);
+                        imprimirListaCom((ArrayList) listaComida);
                     }break;
                     case 4:{
                         System.out.printf(VERDE + "Saliendo......" + RESET);
@@ -116,6 +138,15 @@ public class Main {
         for (int i = 0; i < lista.size();i++){
             presentacionArtistas artista = (presentacionArtistas) lista.get(i);
             artista.imprimirListaArt();
+
+            System.out.println("");
+        }
+    }
+
+    public static void imprimirListaCom(ArrayList lista){//Imprime lo que tenga en las clases de la comida
+        for (int i = 0; i < lista.size();i++){
+            ingredientesComida comida = (ingredientesComida) lista.get(i);
+            comida.imprimirListaCom();
 
             System.out.println("");
         }

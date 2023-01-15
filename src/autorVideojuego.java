@@ -1,4 +1,6 @@
 public class autorVideojuego extends categoriaVideojuego{//Clase Nieta
+    static final String RESET = "\u001B[0m";//Elimina el color anterior
+    static final String AZUL = "\u001B[34m";//Color azul a las letras
     String nombreAutor;
     int edad;
 
@@ -25,11 +27,19 @@ public class autorVideojuego extends categoriaVideojuego{//Clase Nieta
     }
 
     public String miVideojuego(String nombre, int anio, String tipoCategoria, String pais, String nombreAutor, int edad){
-        return ("Nombre del videojuego es: " + nombre + " Publicado: " + anio + " Categoria: " + tipoCategoria + " Pais: " + pais
-                + " Autor:" + nombreAutor + " Edad del autor: " + edad);
+        return (AZUL + "Nombre del videojuego es: " + RESET + nombre +
+                AZUL + "\nPublicado: " + RESET + anio +
+                AZUL + "\nCategoria: " + RESET + tipoCategoria +
+                AZUL + "\nPais: " + RESET + pais +
+                AZUL + "\nAutor:" + RESET + nombreAutor +
+                AZUL + "\nEdad del autor: " + RESET + edad);
     }
     public void imprimirVideojuego(){
-        System.out.print("Nombre del videojuego es: " + nombre + " Publicado: " + anio + " Categoria: " + tipoCategoria + " Pais: " + pais
-                + " Autor:" + nombreAutor + " Edad del autor: " + edad);
+        System.out.print(AZUL + "Nombre del videojuego es: " + RESET + nombre +
+                AZUL + "\nPublicado: " + RESET + anio +
+                AZUL + "\nCategoria: " + RESET + tipoCategoria +
+                AZUL + "\nPais: " + RESET + pais +
+                AZUL + "\nAutor: " + RESET + nombreAutor +
+                AZUL + "\nEdad del autor: " + RESET + edad);
     }
 }

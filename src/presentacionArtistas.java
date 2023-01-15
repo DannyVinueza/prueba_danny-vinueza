@@ -1,4 +1,6 @@
 public class presentacionArtistas extends generoArtistas{//Clase Nieta
+    static final String RESET = "\u001B[0m";//Elimina el color anterior
+    static final String AZUL = "\u001B[34m";//Color azul a las letras
     String paisPresentacion;
     String ciudadPresentacion;
 
@@ -25,20 +27,20 @@ public class presentacionArtistas extends generoArtistas{//Clase Nieta
     }
 
     public String imprimirTodo(String nombreArt, int anioNac, String generoMusica, int nCanciones, String paisPresentacion, String ciudadPresentacion){
-        return ("Artista: " + nombreArt +
-                "\nAnio de nacimiento: " + anioNac +
-                "\nGenero de Musica: " + generoMusica +
-                "\n# Canciones: " + nCanciones +
-                "\nPais de presentacion: " + paisPresentacion +
-                "Ciudad de presentacion: " + ciudadPresentacion);
+        return (AZUL + "Artista: " + RESET + nombreArt +
+                AZUL + "\nAnio de nacimiento: " + RESET + anioNac +
+                AZUL + "\nGenero de Musica: " + RESET + generoMusica +
+                AZUL + "\n# Canciones: " + RESET + nCanciones +
+                AZUL + "\nPais de presentacion: " + RESET + paisPresentacion +
+                AZUL + "\nCiudad de presentacion: " + RESET + ciudadPresentacion);
     }
 
     public void imprimirListaArt(){
-        System.out.println("Artista: " + nombreArt +
-                "\nAnio de nacimiento: " + anioNac +
-                "\nGenero de Musica: " + generoMusica +
-                "\n# Canciones: " + nCanciones +
-                "\nPais de presentacion: " + paisPresentacion +
-                "\nCiudad de presentacion: " + ciudadPresentacion);
+        System.out.println(AZUL + "Artista: " + RESET + nombreArt +
+                AZUL + "\nAnio de nacimiento: " + RESET + anioNac +
+                AZUL + "\nGenero de Musica: " + RESET + generoMusica +
+                AZUL + "\n# Canciones: " + RESET + nCanciones +
+                AZUL + "\nPais de presentacion: " + RESET + paisPresentacion +
+                AZUL + "\nCiudad de presentacion: " + RESET + ciudadPresentacion);
     }
 }
